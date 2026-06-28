@@ -21,9 +21,9 @@ CLAP_INPUT: int | str | None = 3
 
 class InlineClapDetector:
     # Detects claps in audio chunks using a bandpass filter and peak detection.
-    PEAK = 0.15    # minimum filtered peak to count as a clap
-    DEBOUNCE = 0.2 # seconds to ignore after a detected clap (prevents double-counting one clap)
-    WINDOW = 0.8    # seconds within which two claps must land to count as a double clap
+    PEAK = 0.35    # minimum filtered peak to count as a clap
+    DEBOUNCE = 0.25 # seconds to ignore after a detected clap (prevents double-counting one clap)
+    WINDOW = 0.6    # seconds within which two claps must land to count as a double clap
 
     def __init__(self, sample_rate: int = SAMPLE_RATE) -> None:
         # Pre-compute the bandpass filter coefficients once at startup
