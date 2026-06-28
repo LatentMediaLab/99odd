@@ -1,10 +1,12 @@
 # 99odd
 
-An interactive art installation that generates black-and-white imagery for each of the 99 names of Allah. A double clap selects a name at random, asks Claude to choose two kanji as a personal visual signature for that name, and uses SDXL Turbo to generate a full-bleed image with the kanji integrated into it. The result is displayed fullscreen until the next double clap.
+99odd — the `99` resembles a lowercase _g_, so the title reads as _god_. Flipped upside down, it remains legible. It also references the 99 names of Allah (Asmaul Husna), the complete list of divine attributes in Islamic tradition.
+
+This program is a key part of an interactive art installation that explores the infinite sloppiness of both God and AI.
 
 ## How it works
 
-1. **Double clap** → a name is chosen randomly from the 99 names of Allah (Asmaul Husna)
+1. **Double clap** → a name is chosen randomly from the 99 names of Allah
 2. **Claude Haiku** (speaking as Allah in first person) selects exactly 2 Japanese kanji as a visual signature for that name and writes a short image prompt
 3. **SDXL Turbo** runs two passes:
    - Pass 1 — generates a full scene from the prompt (black and white, ink wash style)
@@ -27,13 +29,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file in the project root:
+Create a `venv/venv` file (the project reads environment variables from there):
 
 ```
 ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-Optional display settings in `.env`:
+Optional display settings in `venv/venv`:
 
 ```
 FULLSCREEN=1        # 0 = windowed (default), 1 = fullscreen
@@ -52,10 +54,10 @@ The terminal will print available audio input devices on startup. If clap detect
 
 ## Controls
 
-| Action | Effect |
-|--------|--------|
+| Action      | Effect                                             |
+| ----------- | -------------------------------------------------- |
 | Double clap | Generate a new name / interrupt current generation |
-| `ESC` | Quit |
+| `ESC`       | Quit                                               |
 
 ## Project structure
 
@@ -76,5 +78,6 @@ The kanji overlay picks randomly from the fonts in the `fonts/` directory. Any `
 Base code and documentation written with [Claude Code](https://claude.ai/code) (Anthropic).
 
 This installation requires two AI systems to run:
+
 - [Claude Haiku](https://www.anthropic.com/claude) — generates kanji selection and image prompts
 - [SDXL Turbo](https://huggingface.co/stabilityai/sdxl-turbo) — runs locally for image generation
