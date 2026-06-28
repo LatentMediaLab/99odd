@@ -1,0 +1,10 @@
+anthropic>=0.96.0
+diffusers>=0.31.0
+transformers>=4.44.0
+accelerate>=0.34.0
+huggingface-hub
+Pillow>=11.0.0
+python-dotenv
+sounddevice>=0.5.0
+scipy>=1.15.0
+screeninfo>=0.8.1
