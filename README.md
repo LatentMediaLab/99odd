@@ -2,7 +2,7 @@
 
 99odd — the `99` resembles a lowercase _g_, so the title reads as _god_. Flipped upside down, it remains legible. It also references the 99 names of Allah (Asmaul Husna), the complete list of divine attributes in Islamic tradition.
 
-This program is a key part of an interactive art installation that explores the beautiful yet _sloppy_ infinity shared by both God and AI.
+This program is a key part of an interactive art installation that explores the beautiful yet _sloppy_ infinity found in both God and AI's work.
 
 ## How it works
 
